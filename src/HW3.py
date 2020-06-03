@@ -20,7 +20,7 @@ img = cv.imread('..\RecognizeMe.jpg')
 # cv.destroyAllWindows()
 
 
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(1)
 
 while(True):
     # Capture frame-by-frame
@@ -38,6 +38,8 @@ while(True):
 
     if roi_gray is not None :
         cv.imshow('frame', roi_gray)
+	rc,png = cv2.imencode('.png',face)
+	msg = png.tobytes()
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
 
