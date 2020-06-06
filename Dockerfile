@@ -8,7 +8,6 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 
 RUN apt-get install -y python3-pip python3-opencv
 
-
 ADD requirements.txt /tmp/
 
 RUN pip3 install -r /tmp/requirements.txt
