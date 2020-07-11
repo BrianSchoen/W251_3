@@ -1,2 +1,4 @@
 numpy
 paho-mqtt
+python-opencv
+
